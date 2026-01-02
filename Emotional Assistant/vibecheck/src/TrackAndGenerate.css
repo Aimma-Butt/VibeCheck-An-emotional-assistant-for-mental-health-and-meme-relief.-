@@ -1,0 +1,1116 @@
+/* === Page Layout === */
+.trackmood-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* === Header === */
+.dashboard-header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  margin: 0 auto;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.brand-name .vibe {
+  color: #634EB7; /* blue */
+}
+
+.brand-name .check {
+  color: #FFB11D; /* yellow */
+}
+
+/* === Navigation === */
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.nav-links button:hover {
+  color: #FFB11D;
+}
+
+/* === Login Button === */
+.login-btn {
+  background-color: #FFB11D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #FFB11D;
+}
+
+/* ========== IMPROVED USER DROPDOWN ========== */
+.user-dropdown-wrapper {
+  position: relative;
+}
+
+.user-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%); */
+  background: #FFB11D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.user-btn:hover {
+  background: #FFB11D;
+  box-shadow: 0 6px 16px rgba(74, 144, 226, 0.4);
+  transform: translateY(-2px);
+}
+
+.user-avatar {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-name {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.chevron {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu Container */
+.user-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e8eef7;
+  overflow: hidden;
+  min-width: 280px;
+  z-index: 100;
+  animation: dropdownFadeIn 0.3s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User Info Section */
+.user-info-section {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f1ff 100%);
+  padding: 18px 20px;
+  border-bottom: 1px solid #e0e8f5;
+}
+
+.user-info-label {
+  font-size: 11px;
+  color: #7b8fa8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.user-display-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2332;
+  margin: 0;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #7b8fa8;
+  margin: 4px 0 0 0;
+  word-break: break-all;
+}
+
+/* Menu Items Container */
+.dropdown-items {
+  padding: 8px 0;
+  border-bottom: 1px solid #e8eef7;
+}
+
+/* Individual Dropdown Item */
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #f8faff;
+}
+
+.item-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+}
+
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2332;
+  transition: color 0.2s ease;
+}
+
+.item-subtitle {
+  font-size: 12px;
+  color: #8a98ae;
+  transition: color 0.2s ease;
+}
+
+.dropdown-item:hover .item-title {
+  color: #624EB7;
+}
+
+.dropdown-item:hover .item-subtitle {
+  color: #624EB7;
+}
+
+/* Logout Item Special Styling */
+.logout-item {
+  padding: 14px 16px;
+  border-top: 1px solid #e8eef7;
+}
+
+.logout-item:hover {
+  background-color: #fff5f5;
+}
+
+.logout-item:hover .item-title {
+  color: #e63946;
+}
+
+.logout-item:hover .item-subtitle {
+  color: #e63946;
+}
+
+/* === Main Container === */
+.trackmood-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* === Title Block === */
+.title-block {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-block h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.title-subtext {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* === ChatGPT-style Input Container === */
+.chatgpt-input-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Input Wrapper (textarea + mic button) */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  border-color: #4a90e2;
+}
+
+/* ChatGPT-style Textarea */
+.chatgpt-textarea {
+  width: 100%;
+  min-height: 60px;
+  max-height: 200px;
+  padding: 16px 60px 16px 20px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: transparent;
+}
+
+.chatgpt-textarea::placeholder {
+  color: #999;
+}
+
+.chatgpt-textarea:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Mic Button Inside */
+.mic-btn-inside {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  width: 36px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.mic-btn-inside:hover {
+  /* background-color: rgba(74, 144, 226, 0.1); */
+  color: #4a90e2;
+  transform: scale(1.6);
+  border: none;
+}
+
+.mic-btn-inside:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mic-btn-inside[data-recording="true"] {
+  color: #ff4b5c;
+  background-color: #fff5f5;
+  /* background-color: rgba(255, 75, 92, 0.1); */
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Enter Button Container */
+.enter-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.proceed-btn {
+  background-color: #634EB7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px #634EB7;
+}
+
+.proceed-btn:hover:not(:disabled) {
+  background-color: #624EB7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.proceed-btn:disabled {
+  background-color: #624EB7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Error Message */
+.error-message {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto 0;
+  padding: 16px 20px;
+  background-color: #ffe9e9;
+  border: 1px solid #ff4b5c;
+  color: #d32f2f;
+  border-radius: 8px;
+  font-size: 15px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Loading Container */
+.loading-container {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Audio Container */
+#audioContainer {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e3f2fd;
+  animation: fadeIn 0.4s ease;
+}
+
+#audioContainer audio {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ==================== FULL RECOMMENDATIONS BOX ==================== */
+.recommendations-full-container {
+  margin: 20px auto 0;
+  margin-bottom: 20px;
+  max-width: 900px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  animation: slideUp 0.6s ease;
+  border: 2px solid #e3f2fd;
+  width: 100%;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rec-main-header {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #634EB7 0%, #a16ed5 100%);
+  margin: 0;
+}
+
+.rec-main-body {
+  color: #2c3e50;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 30px 35px;
+  background: #f8f9fa;
+}
+
+.rec-main-body pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: "Inter", sans-serif;
+}
+
+.rec-main-footer {
+  padding: 20px;
+  text-align: center;
+  color: #654FB8;
+  font-weight: 600;
+  font-size: 16px;
+  background: white;
+  border-top: 2px solid #e3f2fd;
+}
+
+/* ==================== MEDIA RECOMMENDATIONS (Movies, Series, Books) ==================== */
+.media-recommendations-container {
+  margin: 20px auto 0;
+  max-width: 900px;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: slideUp 0.8s ease-out;
+}
+
+.media-recommendations-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* .media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+} */
+
+.media-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid #e3f2fd;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.media-card-header {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.media-card.movies .media-card-header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+}
+
+.media-card.series .media-card-header {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+}
+
+.media-card.books .media-card-header {
+  background: linear-gradient(135deg, #9775fa 0%, #7950f2 100%);
+}
+
+.media-card-body {
+  padding: 25px;
+  background: #f8f9fa;
+  min-height: 200px;
+}
+
+.media-card-body pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: "Inter", sans-serif;
+  color: #2c3e50;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==================== ENHANCED MEMES SECTION ==================== */
+#memesSection {
+  max-width: 900px;
+  margin: 30px auto 60px;   /* <--- THIS creates extra space above */
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  animation: slideUp 0.8s ease;
+}
+
+
+#memesSection h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #333;
+}
+
+/* Meme Grid Container */
+.memes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Individual Meme Card */
+.meme-card {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  animation: zoomIn 0.5s ease;
+  border: 3px solid #e3f2fd;
+}
+
+.meme-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  border-color: #4a90e2;
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Meme Image Container */
+.meme-image-container {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.meme-image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Meme Actions */
+.meme-actions {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px;
+  background: white;
+  border-top: 2px solid #e3f2fd;
+}
+
+.meme-btn {
+  width: 56px;
+  height: 56px;
+  background: #634EB7;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px #634EB7;
+}
+
+.meme-btn:hover {
+  background: #634EB7;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px #634EB7;
+}
+
+.meme-btn svg {
+  width: 28px;
+  height: 28px;
+  stroke: white;
+}
+
+/* Share Dropdown Container */
+.share-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.share-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px #634EB7;
+  z-index: 100;
+  min-width: 170px;
+  overflow: hidden;
+  animation: dropdownSlide 0.3s ease;
+  border: 2px solid #634EB7;
+}
+
+@keyframes dropdownSlide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.share-dropdown button {
+  padding: 14px 20px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  font-size: 15px;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.share-dropdown button:hover {
+  background:#634EB7;
+  color: white;
+}
+
+/* SUPPORTING LINE BELOW ENTERTAINMENT BOXES */
+.supporting-line-below {
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a90e2;
+  background: white;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 2px solid #e3f2fd;
+  animation: fadeIn 0.6s ease;
+}
+
+/* MUSIC CARD HEADER GRADIENT */
+.media-card.music .media-card-header {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+}
+
+/* ============ ENTERTAINMENT RECOMMENDATIONS SECTION ============ */
+
+.media-recommendations-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  animation: slideUp 0.8s ease-out;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Media Section */
+.media-section {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border: 1px solid#634EB7;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.media-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  border: 2px solid #634EB7; 
+  border-radius: 16px;
+}
+
+.media-section-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #634EB7 0%, #a16ed5 100%);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.media-section-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Entertainment Item */
+.entertainment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+}
+
+.entertainment-item:hover {
+  background-color: white;
+  border-color: #634EB7;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-subtitle {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Platform Links */
+.item-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.platform-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #634EB7 0%, #a16ed5 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.platform-link:hover {
+  transform: translateY(-3px);
+  color: white;
+}
+
+.platform-link:active {
+  transform: translateY(-1px);
+}
+
+.platform-icon {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.platform-name {
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+/* Supporting Line */
+.supporting-line-below {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chatgpt-input-container {
+    max-width: 90%;
+  }
+  
+  .input-wrapper {
+    border-radius: 10px;
+  }
+  
+  .chatgpt-textarea {
+    padding: 14px 50px 14px 16px;
+    font-size: 15px;
+    min-height: 55px;
+  }
+  
+  .mic-btn-inside {
+    right: 10px;
+    bottom: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+  
+  .proceed-btn {
+    padding: 10px 28px;
+    font-size: 15px;
+  }
+  
+  .title-block h2 {
+    font-size: 26px;
+  }
+  
+  .title-subtext {
+    font-size: 14px;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .memes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  #memesSection {
+    margin: 30px auto 60px;
+  }
+  
+  #memesSection h2 {
+    font-size: 24px;
+  }
+  
+  .meme-card {
+    max-width: 100%;
+  }
+  
+  .user-dropdown-menu {
+    min-width: 250px;
+  }
+  
+  .dropdown-item {
+    padding: 12px 14px;
+  }
+  
+  .item-title {
+    font-size: 13px;
+  }
+  
+  .item-subtitle {
+    font-size: 11px;
+  }
+  
+  .media-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .recommendations-full-container {
+    margin: 40px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .trackmood-container {
+    margin: 30px auto;
+  }
+  
+  .chatgpt-input-container {
+    max-width: 95%;
+  }
+  
+  .title-block h2 {
+    font-size: 22px;
+  }
+  
+  .title-subtext {
+    font-size: 13px;
+  }
+  
+  .chatgpt-textarea {
+    padding: 12px 45px 12px 14px;
+    font-size: 14px;
+    min-height: 50px;
+  }
+  
+  .mic-btn-inside {
+    right: 8px;
+    bottom: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  .proceed-btn {
+    padding: 9px 24px;
+    font-size: 14px;
+  }
+  
+  .media-recommendations-container {
+    margin: 40px auto;
+  }
+  
+  .media-recommendations-title {
+    font-size: 20px;
+  }
+  
+  .media-grid {
+    gap: 15px;
+  }
+  
+  .media-section-content {
+    padding: 15px;
+  }
+  
+  .item-links {
+    gap: 6px;
+  }
+  
+  .platform-link {
+    padding: 5px 8px;
+    font-size: 11px;
+    border-radius: 15px;
+  }
+  
+  .platform-name {
+    display: none;
+  }
+  
+  .entertainment-item {
+    gap: 8px;
+  }
+  
+  .supporting-line-below {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+.memes-header-image {
+  text-align: center;
+}
+
+.memes-header-image img {
+  max-width: 90%;
+  height: auto;
+}

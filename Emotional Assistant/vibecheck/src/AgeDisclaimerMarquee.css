@@ -1,0 +1,27 @@
+.age-marquee-wrapper {
+  width: 100%;
+  background: #fff3cd; /* soft warning yellow */
+  border-bottom: 1px solid #ffe69c;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+}
+
+.age-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #856404;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
