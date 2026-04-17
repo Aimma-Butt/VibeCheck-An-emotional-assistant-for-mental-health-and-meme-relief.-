@@ -1,11 +1,50 @@
 # Open Source Tool VibeCheck
-# An emotional assistant for mental health and meme relief.
 
-VibeCheck is your personal emotional wellness assistant that makes mental health tracking simple and uplifting. Every time you share how you're feeling, our system analyzes your mood, offers supportive insights. You can also generate personalized memes to add some laughter to your day. Because healing doesn't always have to be serious — it can be fun too.
+An emotional assistant for mental health and meme relief.
 
-# Smart Insights
-Get personalized mental health tips tailored to your vibe.
-# Fun Memes
-Enjoy uplifting memes when you need a quick smile.
-# Safe & Private
-Your feelings are yours. We respect your privacy, always.
+Vibe Check is a full-stack web application that helps users understand their mood using Sentiment Analysis and receive personalized recommendations to improve their vibe.
+
+The platform combines mental wellness + entertainment + humor by offering:
+🧠 Mood detection from user input
+💡 Personalized mental health recommendations
+😂 Meme suggestions to lighten the mood
+🎵 Music recommendations
+📚 Book recommendations
+🎬 Movie recommendations
+🔐 User authentication system
+
+# 🌟 Why Vibe Check?
+
+Mental health support tools often feel too serious or difficult to approach.
+Vibe Check creates a more engaging experience by combining emotional support with entertainment and humor.
+It helps users feel understood while also giving them something uplifting.
+
+# 🛠️ Tech Stack
+
+Frontend(client):
+-> React.js
+-> Vite
+-> React Router DOM
+Backend(server):
+-> Python Flask
+Database:
+-> Firebase
+
+# ⚙️ Installation Guide
+
+1️⃣ Frontend Setup
+cd client
+npm install
+npm run dev
+
+Runs frontend on:
+http://localhost:5173
+
+2️⃣ Backend Setup
+Open new terminal:
+cd server
+pip install -r requirements.txt
+python app.py
+
+Runs backend on:
+http://localhost:5000
