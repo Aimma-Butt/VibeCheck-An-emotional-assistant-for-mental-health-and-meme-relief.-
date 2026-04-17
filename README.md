@@ -34,9 +34,6 @@ It helps users feel understood while also giving them something uplifting.
 - npm install
 - npm run dev
 
-Runs frontend on:
-http://localhost:5173
-
 ### 2️⃣ Backend Setup
 
 Open new terminal:
@@ -44,8 +41,8 @@ Open new terminal:
 - pip install -r requirements.txt
 - python app.py
 
-Runs backend on:
-http://localhost:5000
+Runs on:
+http://localhost:5173
 
 
 
