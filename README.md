@@ -30,18 +30,19 @@ It helps users feel understood while also giving them something uplifting.
 # ⚙️ Installation Guide
 
 1️⃣ Frontend Setup
-cd client
-npm install
-npm run dev
+- cd client
+- npm install
+- npm run dev
 
 Runs frontend on:
 http://localhost:5173
 
 2️⃣ Backend Setup
+
 Open new terminal:
-cd server
-pip install -r requirements.txt
-python app.py
+- cd server
+- pip install -r requirements.txt
+- python app.py
 
 Runs backend on:
 http://localhost:5000
